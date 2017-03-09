@@ -57,4 +57,4 @@ function isTimestamp(ts) {
   return !isNaN(ts) && isFinite(ts) && /\d{8,15}/.test(ts)
 }
 
-app.listen(3000)
+app.listen(process.env.PORT || 8080)
