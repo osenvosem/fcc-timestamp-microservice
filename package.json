@@ -10,7 +10,8 @@
     "start:dev": "nodemon"
   },
   "dependencies": {
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "marked": "^0.3.6"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"

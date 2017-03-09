@@ -1,11 +1,39 @@
+const fs = require('fs')
 const express = require('express')
+const marked = require('marked')
+
 const app = express()
 
-var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
-
+// Home page
 app.get('/', (req, res) => {
-  res.send('Main page')
+  fs.readFile('./README.md', 'utf8', (err, content) => {
+    if (err) return res.status(500)
+    marked(content, (err, parsed) => {
+      if (err) return res.status(500)
+      const page = `
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <meta http-equiv="X-UA-Compatible" content="ie=edge">
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+          <title>Free Code Camp Timestamp Microservice project</title>
+          <style>body {font: 1em "Open Sans"; margin: 40px}</style>
+        </head>
+        <body>
+          <main>
+            <article>${parsed}</article>
+          </main>
+        </body>
+        </html>
+      `
+      return res.send(page)
+    })
+  })
 })
+
+const monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
 
 app.get('/:date', (req, res) => {
   let result = { unix: null, natural: null }
