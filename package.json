@@ -1,0 +1,18 @@
+{
+  "name": "fcc-timestamp-microservice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/osenvosem/fcc-timestamp-microservice",
+  "author": "Sergey Samsonov <osenvosem@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node",
+    "start:dev": "nodemon"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
