@@ -1,4 +1,4 @@
-# Free Code Camp Timestamp Microservice project
+# Free Code Camp :: Timestamp Microservice challenge
 ___
 
 [Homepage](https://fcc-ts-ms-osenvosem.herokuapp.com) | [Github](https://github.com/osenvosem/fcc-timestamp-microservice)
