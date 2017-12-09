@@ -1,4 +1,4 @@
-# Free Code Camp :: Timestamp Microservice challenge
+# Free Code Camp :: Timestamp Microservice
 
 ## [Demo](https://fcc-timestamp-microservice-1.herokuapp.com/)
 
